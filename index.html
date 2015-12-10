@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Data Science stuff.</title>
+    <title>Perceptron Ventures</title>
     <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
@@ -28,9 +28,9 @@
                   <nav class="pull">
                     <ul class="top-nav">
                       <li><a href="#intro">Introduction <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                      <li><a href="#features">Features <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                      <li><a href="#responsive">Responsive Design <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
-                      <li><a href="#portfolio">Portfolio <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                      <li><a href="#data">The Data <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                      <li><a href="#models">Predictive Models<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
+                      <li><a href="#similarity">Similarity Measures<span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
                       <li><a href="#team">Team <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
                       <li><a href="#contact">Get in Touch <span class="indicator"><i class="fa fa-angle-right"></i></span></a></li>
                     </ul>
@@ -48,7 +48,7 @@
               </div>
               <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center inner">
-                  <h1 class="animated fadeInDown">START-UP PREDICTORS</h1>
+                  <h1 class="animated fadeInDown">Perceptron Ventures</h1>
                   <p class="animated fadeInUp delay-05s">Using <em>Crunchbase</em> data to predict the success of start-ups.</p>
                 </div>
               </div>
@@ -65,58 +65,35 @@
             <div class="row">
               <div class="col-md-8 col-md-offset-2 wp1">
                 <h1 class="arrow">The project</h1>
-                <p>Sed a lorem quis neque interdum <a href="#">consequat ut sed sem</a>. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent id tempor ipsum. Fusce at massa ac nunc porta fringilla sed eget neque. Quisque quis pretium nulla. Fusce eget bibendum neque, vel volutpat augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+                <p>We gathered data for nearly 7000 companies from the Crunchbase API, restricting to companies who were founded prior to 2011. We then cleaned the data to form indicators based on location, sector, and relevant information about founders. We also had available data on funding rounds, acquisitions, and IPO's. Our goal was to define a successful company based off the latter, and try to form some features from the former to accurately predict success. As we are analyzing these companies to determine if we should seed fund a startup, we also looked at the problem through the lens of profit and ROC curves. Finally, we wanted to approach the data in an entirely different direction - seeing if we could cluster certain startups together through a similarity measure.</p>
               </div>
             </div>
           </div>
         </section>
-        <section class="features text-center section-padding" id="features">
+        <section class="features text-center section-padding" id="data">
           <div class="container">
             <div class="row">
               <div class="col-md-12">
                 <h1 class="arrow">The data</h1>
                 <div class="features-wrapper">
-                  <div class="col-md-4 wp2">
-                    <div class="icon">
-                      <i class="fa fa-laptop shadow"></i>
-                    </div>
-                    <h2>Digital Design</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
-                    primis in faucibus.</p>
+                  <div class="col-md-5 wp2">
+                    <h2><a href="https://github.com/nicodri/CS109_crunchbase/blob/master/test.xlsx">Excel Database</a></h2>
+                    <p>Crunchbase has both a REST API and an Excel spreadsheet database. We used the Excel spreadsheet to inform our REST API calls. When initially looking through the REST API, it seemed many companies had scarce data. Also, the data was extremely decentralized, with gathering one organization requiring many different API calls. The Excel spreadsheet on the other hand, while only a subset of the companies, provided overall a much better picture of the companies. We scraped the Excel spreadsheet, coming up with a list of <b>25171</b> eligible companies that were funded before 2011. </p>
                   </div>
-                  <div class="col-md-4 wp2 delay-05s">
-                    <div class="icon">
-                      <i class="fa fa-code shadow"></i>
-                    </div>
-                    <h2>Web Development</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
-                    primis in faucibus.</p>
+                  <div class="col-md-7 wp2 delay-05s">
+                    <h2><a href="https://data.crunchbase.com/docs">REST API</a></h2>
+                    <p>The Crunchbase API is separated into different entities. Each entity has connections with other entities. After looking through the API we created a map of entities to relevant attributes we wanted to parse. This was not as smooth of a process as we had hoped. We had 8 different entities we were concerned about - Person, Address, Market, Product, Organization, FundingRound, Acquisition and IPO. Each entity has relevant attributes we care about (biographies, specifics on funding, etc) as well as relationships between different entities (competitors, categories, investors, etc). A single organization could require as many as 15 API calls. We also noticed that after having automated queries for a certain period of time, Crunchbase would disable our API key temporarily. We then had to set up scripts to catch those and sleep for a specified amount of time. Altogether, we were able to gather <b>6852</b> companies over the course of three days.</p>
                   </div>
-                  <div class="col-md-4 wp2 delay-1s">
-                    <div class="icon">
-                      <i class="fa fa-heart shadow"></i>
-                    </div>
-                    <h2>Creative Direction</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a lorem quis neque interdum consequat ut sed sem. Duis quis tempor nunc. Interdum et malesuada fames ac ante ipsum
-                    primis in faucibus.</p>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
               </div>
             </div>
           </div>
         </section>
-        <section class="text-center" id="responsive">
+        <section class="text-center" id="models">
           <div class="container-fluid nopadding responsive-services">
             <div class="wrapper">
-              <div class="iphone">
-                <div class="wp3"></div>
-              </div>
-              <div class="fluid-white"></div>
-            </div>
             <div class="container designs">
               <div class="row">
-                <div class="col-md-5 col-md-offset-7">
+                <div class="col-md-12">
                   <div id="servicesSlider">
                     <ul class="slides">
                       <li>
@@ -145,12 +122,12 @@
             <div class="row">
               <div class="col-md-8 col-md-offset-2">
                 <h1>I got 99 Problems<span>but <em>nicolas</em> 'aint one</span></h1>
-                <a href="#portfolio" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
+                <a href="#similarity" class="down-arrow-btn"><i class="fa fa-chevron-down"></i></a>
               </div>
             </div>
           </div>
         </section>
-        <section class="portfolio text-center section-padding" id="portfolio">
+        <section class="portfolio text-center section-padding" id="similarity">
           <div class="container">
             <div class="row">
               <div id="portfolioSlider">
@@ -301,7 +278,7 @@
           <div class="container">
             <div class="row">
               <div class="col-md-12">
-                <h1 class="arrow">Drop us a line</h1>
+                <h1 class="arrow">Reach Out To Us!</h1>
               </div>
             </div>
             <div class="row contact-details">
