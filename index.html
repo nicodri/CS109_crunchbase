@@ -97,18 +97,52 @@
                   <div id="servicesSlider">
                     <ul class="slides">
                       <li>
-                        <h1 class="arrow">Responsive Design Specialists</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero. </p>
-                        <p>
-                        Mauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan. </p>
-                        <p>Etiam eget libero et erat eleifend consectetur a nec lectus. Sed id tellus lorem. Suspendisse sed venenatis odio, quis lobortis eros.</p>
+                        <h1 class="arrow">What's a successful company?</h1>
+                        <p>Criteria for successful company:<br/>
+                        1072 acquired, 502 IPOed, 1001 with at least 4 rounds of funding = 2153 (31.4% success rate)</p>
+                        <p>Crunchbase is an already selective group of startups, so a couple funding rounds is not uncommon.</p>
+                        <img src="img/funding_rounds.png" alt="Funding Rounds" style="width:500px;height:300px;">
                       </li>
                       <li>
-                        <h1 class="arrow">Bootstrap Professionals</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet. Praesent non adipiscing libero. </p>
-                        <p>
-                        Mauris ultrices odio vitae nulla ultrices iaculis. Nulla rhoncus odio eu lectus faucibus facilisis. Maecenas ornare augue vitae sollicitudin accumsan. </p>
-                        <p>Etiam eget libero et erat eleifend consectetur a nec lectus. Sed id tellus lorem. Suspendisse sed venenatis odio, quis lobortis eros.</p>
+                        <h1 class="arrow">Baselines</h1>
+                        <p> After splitting our data set into training, test, and validation groups, our all-fails baseline for the test set has a <b>66.47%</b> accuracy. </p>
+                        <p> Accuracy isn't the only thing we care about - we also want profit. We assume we'll invest 50K for 2.5% equity stake in a company. Given the information in Crunchbase, let's assume the value of a company is the total funding it receives, and since it's highly skewed to the right we look at the median total funding to be our "average success company". This turns out to be 12 million!! Our utility matrix is:</p>
+                        <table border="1" class="col-md-4 col-md-offset-4">
+                          <tr>
+                          <td></td>
+                          <td>Pred Neg</td>
+                          <td>Pred Pos</td>
+                          </tr>
+                          <tr>
+                          <td>Obs Neg</td>
+                          <td>0</td>
+                          <td>-50K</td>
+                          </tr>
+                          <tr>
+                          <td>Obs Pos</td>
+                          <td>-300K</td>
+                          <td>250K</td>
+                          </tr>
+                        </table>
+                        <p class="col-md-12">Using this our baseline in terms of profit is actually the all-success baseline: <b>$50583.09</b></p>
+                      </li>
+                      <li>
+                        <h1 class="arrow">Accuracies</h1>
+                        <p>We tried 5 different models, cross-validating over hyperparameters with each, and built an ensemble over the best results from them. Here are our accuracies:</p>
+                        <ul class="col-md-8 col-md-offset-2" style="list-style-type:none">
+                          <li>K-Nearest with n=30: 72.28%</li>
+                          <li>Logistic Regression with 5-fold cv, l2 reg: 72.89%</li>
+                          <li>SVM-rbf: 71.14%</li>
+                          <li>Naive Bayes (50 top words, then drop top 30): 65%</li>
+                          <li>Random Forest (20 trees): 74.06%</li>
+                          <li>Ensemble: 75.22%</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h1 class="arrow">Not So Fast</h1>
+                        <img src="img/ROC.png" alt="Funding Rounds" class="col-md-6">
+                        <img src="img/Profit.png" alt="Funding Rounds" class="col-md-6">
+                        <p class="col-md-12">Our profit/ROC curves aren't so hot, meaning our predictors aren't accepted some successful companies until our success probability threshold essentially goes to 0... that's not an accurate model. Choosing startups is difficult!</p>
                       </li>
                     </ul>
                   </div>
