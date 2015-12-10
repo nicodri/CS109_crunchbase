@@ -22,6 +22,32 @@
  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
  <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
 
+
+
+    <link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+	  <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	  <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	  <!-- Javascript -->
+	  <script>
+	     $(function() {
+	        $( "#slider-4" ).slider({
+	           orientation:"vertical"	
+	        });
+	        $( "#slider-4" ).slider('disable');
+	        $( "#slider-5" ).slider({
+	           orientation:"horizontal",
+	           value:10000000,
+	           min:500000,
+	           max:100000000,
+	           step:500000,
+	           slide: function( event, ui ) {
+	              $( "#minval" ).val( ui.value );
+	           }	
+	        });
+	        $( "#minval" ).val( $( "#slider-5" ).slider( "value" ) );
+	     });
+		</script>
+
     <style>
       #map {
         height: 400px;
@@ -103,6 +129,16 @@
                     <p>The Crunchbase API is separated into different entities. Each entity has connections with other entities. After looking through the API we created a map of entities to relevant attributes we wanted to parse. This was not as smooth of a process as we had hoped. We had 8 different entities we were concerned about - Person, Address, Market, Product, Organization, FundingRound, Acquisition and IPO. Each entity has relevant attributes we care about (biographies, specifics on funding, etc) as well as relationships between different entities (competitors, categories, investors, etc). A single organization could require as many as 15 API calls. We also noticed that after having automated queries for a certain period of time, Crunchbase would disable our API key temporarily. We then had to set up scripts to catch those and sleep for a specified amount of time. Altogether, we were able to gather <b>6852</b> companies over the course of three days.</p>
                   </div>
               </div>
+            </div>
+
+            <div class="row">
+            	<div id="slider-4"></div>
+		         <p>
+		            <label for="minval">Companies that have raised in USD (by sector):</label>
+		            <input type="text" id="minval" 
+		               style="border:0; color:#b9cd6d; font-weight:bold;">
+		         </p>
+		         <div id="slider-5"></div>
             </div>
           </div>
         </section>
