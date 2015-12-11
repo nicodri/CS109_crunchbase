@@ -1,6 +1,6 @@
 # CS109_crunchbase
 
-As investors we want to know which companies will succeed and which companies will fail so we can make smart investments. Unfortunately there is no way to know ahead of time which companies will succeed or fail, however, we can try to predict success based on the huge amounts of data available online about startups. For this project we will be analyzing data obtained through the CrunchBase API.
+We are an analytics firm that provides consulting services for investors based on our data science expertise. Unfortunately there is no way to know ahead of time which companies will succeed or fail, however, we can try to predict success based on the huge amounts of data available online about startups. For this project we will be analyzing data obtained through the CrunchBase API.
 
 You can learn more about us and play with our visualization on our website:
 
@@ -63,3 +63,12 @@ You need the following libraries to run the code:
 * scipy
 * json
 * requests
+
+# Reference
+
+We would like to quote here the tools we use to build our website:
+
+* [Peter Finlan](http://peterfinlan.com/) for the website template
+* [Canvasjs](http://canvasjs.com/) for the slider animation
+* [Mapbox](https://www.mapbox.com/about/maps/) for the map
+* [Alchemy.j](http://graphalchemist.github.io/Alchemy/#/) for the nodes graph
