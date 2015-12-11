@@ -11,7 +11,7 @@ http://nicodri.github.io/CS109_crunchbase/
 ## Data Collection Notebook
 Used to pull data from the CrunchBase API.
 
-* [Scraping Data](#.-Scraping-Data)
+* [Scraping Data](https://github.com/nicodri/CS109_crunchbase/blob/master/DataScraping.ipynb)
 * [1. Organization List](#1.-Organization-List)
 * [2. Excel API](#2.-Excel-API)
 * [3. Relationships](#3.-Relationships) 
@@ -19,7 +19,7 @@ Used to pull data from the CrunchBase API.
 ## Ensemble Analysis Notebook
 Used to analyze the CrunchBase data by building individual Models and combining them into an ensemble.
 
-* [Predicting Startup Success](#Predicting-Startup-Success)
+* [Predicting Startup Success](https://github.com/nicodri/CS109_crunchbase/blob/master/EnsembleAnalysis.ipynb)
 * [1. Data Cleaning](#1.-Data-Cleaning)
 * [2. Exploratory Data Analysis](#2.-Exploratory-Data-Analysis)
 * [3. Bring out the Models](#3.-Bring-out-the-Models) 
@@ -35,7 +35,7 @@ Used to analyze the CrunchBase data by building individual Models and combining 
 ## Similarity Graph Notebook
 Used to build a similarity graph of the companies.
 
-* [Similarity Graph](#Similarity-Graph)
+* [Similarity Graph](https://github.com/nicodri/CS109_crunchbase/blob/master/Similarity%20Graph.ipynb)
 * [1. Formating the Data](#1.-Formating-the-Data)
     * [1.1 Loading Data](#1.1-Loading-Data)
     * [1.2 Dimensionality Reduction](#1.2-Dimensionality-Reduction)
