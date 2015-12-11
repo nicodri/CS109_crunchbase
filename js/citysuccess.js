@@ -388,9 +388,7 @@ var tip = d3.tip()
       .attr('class', 'd3-tip')
       .offset([-10, 0])
       .html(function(d) {
-        return "<strong>" + d.city + "</strong><br />Successes: " + d.suc + "<br />Failures: " + d.fail + "<br /> Rate: " + parseFloat(d.rate * 100).toFixed(1) + "%";
-
-        //return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
+        return '<strong style="font-size:24;color:#8debff">' + d.city + "</strong><br />Successes: " + d.suc + "<br />Failures: " + d.fail + "<br /> Rate: " + parseFloat(d.rate * 100).toFixed(1) + "%";
       })
 
 var dataset = dataset.map(function (group) {
