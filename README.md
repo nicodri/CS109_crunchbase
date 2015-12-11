@@ -6,6 +6,10 @@ You can learn more about us and play with our visualization on our website:
 
 http://nicodri.github.io/CS109_crunchbase/
 
+or watch our video:
+
+https://www.youtube.com/watch?v=M5FSEExBVDs
+
 # Table of Contents of the Process Notebooks
 
 ## Data Collection Notebook
