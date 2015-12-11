@@ -117,10 +117,9 @@
             </div>
             <br /><br /><br /><br />
             <div class="row">
-		         <h1 class="center">
-		            <label for="minval">Companies that have raised at least (by sector):</label>
-		            <input type="text" id="minval"
-		               style="border:0; font-weight:bold;">
+		         <h1 class="arrow">
+		            Companies that have raised at least (by sector):
+		            <p id="minval" style="font-size:160%;"></p>
 		         </h1>
 		         <div id="slider-5"></div>
 		         <div id="chartContainer" style="height: 300px; width: 100%;"></div>
@@ -347,11 +346,11 @@
 	           max:100000000,
 	           step:500000,
 	           change: function( event, ui ) {
-	              $( "#minval" ).val( ui.value/1000000 + "M USD" );
+	              $( "#minval" ).text( ui.value/1000000 + "M USD" );
 	              update_chart(sector_ranges[ui.value])
 	           }
 	        });
-	        $( "#minval" ).val( $( "#slider-5" ).slider( "value" )/1000000 + "M USD" );
+	        $( "#minval" ).text( $( "#slider-5" ).slider( "value" )/1000000 + "M USD" );
 	        update_chart(sector_ranges[$( "#slider-5" ).slider( "value" )]);
 	     });
 		</script>
