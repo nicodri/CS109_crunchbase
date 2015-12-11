@@ -63,3 +63,11 @@ You need the following libraries to run the code:
 * scipy
 * json
 * requests
+
+# Reference
+
+We would like to quote here the tools we use to build our website:
+
+* [Peter Finlan](http://peterfinlan.com/) for the website template
+* [Canvasjs](http://canvasjs.com/) for the slider animation
+* [Mapbox](https://www.mapbox.com/about/maps/) for the map
