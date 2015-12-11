@@ -327,7 +327,7 @@ width = 1000 - margins.left - margins.right - legendPanel.width,
 {cat: "Search", count: "26", success: "26", failure: "73", rate: "0.262626262626"},
 {cat: "News", count: "26", success: "26", failure: "66", rate: "0.282608695652"},
 {cat: "Medical", count: "20", success: "20", failure: "70", rate: "0.222222222222"}],
-        name: 'Successes'
+        name: 'Success'
     }, {
         data: [{cat: "Software", count: "782", success: "347", failure: "782", rate: "0.307351638618"},
 {cat: "Biotechnology", count: "406", success: "245", failure: "406", rate: "0.376344086022"},
@@ -359,7 +359,7 @@ width = 1000 - margins.left - margins.right - legendPanel.width,
 {cat: "Search", count: "73", success: "26", failure: "73", rate: "0.262626262626"},
 {cat: "News", count: "66", success: "26", failure: "66", rate: "0.282608695652"},
 {cat: "Medical", count: "70", success: "20", failure: "70", rate: "0.222222222222"}],
-        name: 'Failures'
+        name: 'Failure'
     }
 
     ],
@@ -389,8 +389,6 @@ var tip = d3.tip()
       .offset([-10, 0])
       .html(function(d) {
         return '<strong style="font-size:24;color:#8debff">' + d.cat + "</strong><br />Successes: " + d.suc + "<br />Failures: " + d.fail + "<br /> Rate: " + parseFloat(d.rate * 100).toFixed(1) + "%";
-
-        //return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
       })
 
 var dataset = dataset.map(function (group) {

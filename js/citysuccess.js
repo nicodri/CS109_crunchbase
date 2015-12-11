@@ -327,7 +327,7 @@ width = 1000 - margins.left - margins.right - legendPanel.width,
 {city: "Tokyo", count: "18", success: "18", failure: "32", rate: "0.36"},
 {city: "Denver", count: "18", success: "18", failure: "27", rate: "0.4"},
 {city: "Barcelona", count: "14", success: "14", failure: "31", rate: "0.311111111111"}],
-        name: 'Successes'
+        name: 'Success'
     }, {
         data: [{city: "New York", count: "234", success: "179", failure: "234", rate: "0.433414043584"},
 {city: "San Francisco", count: "211", success: "184", failure: "211", rate: "0.46582278481"},
@@ -359,7 +359,7 @@ width = 1000 - margins.left - margins.right - legendPanel.width,
 {city: "Tokyo", count: "32", success: "18", failure: "32", rate: "0.36"},
 {city: "Denver", count: "27", success: "18", failure: "27", rate: "0.4"},
 {city: "Barcelona", count: "31", success: "14", failure: "31", rate: "0.311111111111"}],
-        name: 'Failures'
+        name: 'Failure'
     }
 
     ],

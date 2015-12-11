@@ -80,7 +80,7 @@
               </div>
               <div class="row">
                 <div class="col-md-6 col-md-offset-3 text-center">
-                  <a href="#intro" class="learn-more-btn">Get Started</a>
+                  <a href="https://github.com/nicodri/CS109_crunchbase" target="_blank" class="learn-more-btn">View Our Code</a>
                 </div>
               </div>
             </div>
@@ -91,7 +91,11 @@
             <div class="row">
               <div class="col-md-8 col-md-offset-2 wp1">
                 <h1 class="arrow">The project</h1>
-                <p>We gathered data for nearly 7000 companies from the Crunchbase API, restricting to companies who were founded prior to 2011. We then cleaned the data to form indicators based on location, sector, and relevant information about founders. We also had available data on funding rounds, acquisitions, and IPO's. Our goal was to define a successful company based off the latter, and try to form some features from the former to accurately predict success. As we are analyzing these companies to determine if we should seed fund a startup, we also looked at the problem through the lens of profit and ROC curves. Finally, we wanted to approach the data in an entirely different direction - seeing if we could cluster certain startups together through a similarity measure.</p>
+                <p>We gathered data for nearly 7000 companies from the Crunchbase API, limiting our data gathering to companies that were founded prior to 2011. We then cleaned the data to form indicators based on location, sector, and relevant information about the company's founders. We also had access to data on each company's funding rounds, acquisitions, and IPO's. 
+                
+                <br /><br />Our goal was to come with a definition for what constitutes a successful company based off some of these metrics, and use the remainder of the features to accurately predict success. As we were analyzing these companies to determine if we should seed fund a startup, we also looked at the problem through the lens of Profit and ROC curves as funding a company that is ultimately unsuccessful has a much different cost than missing a company that winds up successful. 
+                
+                <br /><br />Finally, we wanted approached the data again from an entirely different direction - seeing if we could cluster certain startups together through a similarity measure.  We used this to see which companies were connected, and tried to glean useful information from these connections.</p>
               </div>
             </div>
           </div>
@@ -104,7 +108,7 @@
                 <div class="features-wrapper">
                   <div class="col-md-5 wp2">
                     <h2><a href="https://github.com/nicodri/CS109_crunchbase/blob/master/test.xlsx">Excel Database</a></h2>
-                    <p>Crunchbase has both a REST API and an Excel spreadsheet database. We used the Excel spreadsheet to inform our REST API calls. When initially looking through the REST API, it seemed many companies had scarce data. Also, the data was extremely decentralized, with gathering one organization requiring many different API calls. The Excel spreadsheet on the other hand, while only a subset of the companies, provided overall a much better picture of the companies. We scraped the Excel spreadsheet, coming up with a list of <b>25171</b> eligible companies that were funded before 2011. </p>
+                    <p>Crunchbase has both a REST API and an Excel spreadsheet database. We used the Excel spreadsheet to inform our REST API calls. When we first looked at the data through the REST API, it was clear that many companies had very sparse data. Also, the data was extremely decentralized, with gathering one organization requiring many different API calls. The Excel spreadsheet on the other hand, while only a subset of the companies, provided overall a much better picture of the companies. We scraped the Excel spreadsheet, coming up with a list of <b>25171</b> eligible companies that were funded before 2011. </p>
                   </div>
                   <div class="col-md-7 wp2 delay-05s">
                     <h2><a href="https://data.crunchbase.com/docs">REST API</a></h2>
@@ -112,7 +116,7 @@
                   </div>
               </div>
             </div>
-                    
+            <br /><br /><br /><br />
             <div class="row">
 		         <h1 class="center">
 		            <label for="minval">Companies that have raised at least (by sector):</label>
@@ -131,11 +135,11 @@
                     </p>
                 </div>
                 <br /><br /><br />
-                <h1 class = "arrow">Success By Category</h1><br/>
+                <h1 class = "arrow">Company Success Rate by Industry</h1><br/>
                 <div id="categorysuccessrates"></div>              
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                <h1 class = "arrow">Success By City</h1><br/>
+                <h1 class = "arrow">Company Success Rate by City</h1><br/>
                 <div id="citysuccessrates"></div>              
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
             </div>
@@ -207,7 +211,7 @@
         </section>
         <section class="swag text-center" id="">
           <div class="container">
-            <h2 style="color:white">Top 100 Companies across the globe by funding amount</h2>
+            <h2 style="color:white">The Top 100 Companies worldwide by funding raised</h2>
               <div id="map"></div>
           </div>
         </section>
