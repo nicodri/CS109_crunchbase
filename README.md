@@ -8,7 +8,7 @@ http://nicodri.github.io/CS109_crunchbase/
 
 # Table of Contents of the Process Notebooks
 
-## Scrapping Notebook
+## Data Collection Notebook
 Used to pull data from the CrunchBase API.
 
 * [Scraping Data](#.-Scraping-Data)
@@ -52,7 +52,7 @@ Used to build a similarity graph of the companies.
     
 # System Requirements
 
-We developped a Python process using Python 2.7.9 on OS X.
+We developed a Python process using Python 2.7.9 on OS X.
 
 You need the following libraries to run the code:
 
