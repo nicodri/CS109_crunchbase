@@ -371,10 +371,12 @@ width = 1000 - margins.left - margins.right - legendPanel.width,
             // Structure it so that your numeric
             // axis (the stacked amount) is y
             return {
+                city: o.city,
                 y: o.count,
                 x: o.city,
                 suc: o.success,
-                fail: o.failure
+                fail: o.failure,
+                rate: o.rate
             };
         });
     }),
@@ -386,7 +388,7 @@ var tip = d3.tip()
       .attr('class', 'd3-tip')
       .offset([-10, 0])
       .html(function(d) {
-        return "Successes: " + d.suc + " Failures: " + d3.select(this).attr('fail');
+        return "<strong>" + d.city + "</strong><br />Successes: " + d.suc + "<br />Failures: " + d.suc + "<br /> Rate: " + parseFloat(d.rate * 100).toFixed(1) + "%";
 
         //return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
       })
@@ -395,9 +397,13 @@ var dataset = dataset.map(function (group) {
     return group.map(function (d) {
         // Invert the x and y values, and y0 becomes x0
         return {
+            city: d.city,
             x: d.y,
             y: d.x,
-            x0: d.y0
+            x0: d.y0,
+            suc: d.suc,
+            fail: d.fail,
+            rate: d.rate
         };
     });
 }),
@@ -473,10 +479,7 @@ svg.append('rect')
     .attr('x', width - 100 + margins.left)
     .attr('y', 0);
 
-
-
     svg.call(tip);
-
         
 series.forEach(function (s, i) {
     svg.append('text')
