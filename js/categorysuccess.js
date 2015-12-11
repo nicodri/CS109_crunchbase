@@ -283,7 +283,7 @@ d3.tip = function() {
 
 
 
-// City Success Rates
+// Category Success Rates
 
  var margins = {
     top: 12,
@@ -297,68 +297,68 @@ legendPanel = {
 width = 1000 - margins.left - margins.right - legendPanel.width,
     height = 500 - margins.top - margins.bottom,
     dataset = [{
-        data: [{city: "New York", count: "179", success: "179", failure: "234", rate: "0.433414043584"},
-{city: "San Francisco", count: "184", success: "184", failure: "211", rate: "0.46582278481"},
-{city: "London", count: "101", success: "101", failure: "183", rate: "0.355633802817"},
-{city: "Austin", count: "42", success: "42", failure: "65", rate: "0.392523364486"},
-{city: "Seattle", count: "48", success: "48", failure: "55", rate: "0.466019417476"},
-{city: "Paris", count: "20", success: "20", failure: "79", rate: "0.20202020202"},
-{city: "Los Angeles", count: "37", success: "37", failure: "61", rate: "0.377551020408"},
-{city: "Palo Alto", count: "39", success: "39", failure: "59", rate: "0.397959183673"},
-{city: "San Diego", count: "44", success: "44", failure: "51", rate: "0.463157894737"},
-{city: "Chicago", count: "38", success: "38", failure: "53", rate: "0.417582417582"},
-{city: "Boston", count: "36", success: "36", failure: "51", rate: "0.413793103448"},
-{city: "Cambridge", count: "38", success: "38", failure: "41", rate: "0.481012658228"},
-{city: "Beijing", count: "28", success: "28", failure: "47", rate: "0.373333333333"},
-{city: "Mountain View", count: "40", success: "40", failure: "34", rate: "0.540540540541"},
-{city: "Singapore", count: "27", success: "27", failure: "43", rate: "0.385714285714"},
-{city: "San Jose", count: "33", success: "33", failure: "37", rate: "0.471428571429"},
-{city: "Santa Clara", count: "41", success: "41", failure: "26", rate: "0.611940298507"},
-{city: "Sunnyvale", count: "30", success: "30", failure: "34", rate: "0.46875"},
-{city: "Redwood City", count: "28", success: "28", failure: "31", rate: "0.474576271186"},
-{city: "Bangalore", count: "12", success: "12", failure: "47", rate: "0.203389830508"},
-{city: "Shanghai", count: "24", success: "24", failure: "34", rate: "0.413793103448"},
-{city: "Berlin", count: "18", success: "18", failure: "38", rate: "0.321428571429"},
-{city: "San Mateo", count: "28", success: "28", failure: "27", rate: "0.509090909091"},
-{city: "Toronto", count: "28", success: "28", failure: "26", rate: "0.518518518519"},
-{city: "Dublin", count: "12", success: "12", failure: "42", rate: "0.222222222222"},
-{city: "Tel Aviv", count: "15", success: "15", failure: "39", rate: "0.277777777778"},
-{city: "Atlanta", count: "15", success: "15", failure: "35", rate: "0.3"},
-{city: "Tokyo", count: "18", success: "18", failure: "32", rate: "0.36"},
-{city: "Denver", count: "18", success: "18", failure: "27", rate: "0.4"},
-{city: "Barcelona", count: "14", success: "14", failure: "31", rate: "0.311111111111"}],
+        data: [{cat: "Software", count: "347", success: "347", failure: "782", rate: "0.307351638618"},
+{cat: "Biotechnology", count: "245", success: "245", failure: "406", rate: "0.376344086022"},
+{cat: "Mobile", count: "179", success: "179", failure: "362", rate: "0.330868761553"},
+{cat: "Curated Web", count: "113", success: "113", failure: "278", rate: "0.289002557545"},
+{cat: "E-Commerce", count: "104", success: "104", failure: "271", rate: "0.277333333333"},
+{cat: "Enterprise Software", count: "148", success: "148", failure: "206", rate: "0.418079096045"},
+{cat: "Advertising", count: "114", success: "114", failure: "229", rate: "0.332361516035"},
+{cat: "Games", count: "74", success: "74", failure: "215", rate: "0.256055363322"},
+{cat: "Health Care", count: "129", success: "129", failure: "147", rate: "0.467391304348"},
+{cat: "Social Media", count: "70", success: "70", failure: "174", rate: "0.286885245902"},
+{cat: "Hardware + Software", count: "81", success: "81", failure: "152", rate: "0.347639484979"},
+{cat: "Finance", count: "72", success: "72", failure: "145", rate: "0.331797235023"},
+{cat: "Clean Technology", count: "73", success: "73", failure: "143", rate: "0.337962962963"},
+{cat: "Analytics", count: "88", success: "88", failure: "94", rate: "0.483516483516"},
+{cat: "Health and Wellness", count: "45", success: "45", failure: "126", rate: "0.263157894737"},
+{cat: "Manufacturing", count: "38", success: "38", failure: "128", rate: "0.228915662651"},
+{cat: "SaaS", count: "69", success: "69", failure: "95", rate: "0.420731707317"},
+{cat: "Internet", count: "40", success: "40", failure: "122", rate: "0.246913580247"},
+{cat: "Education", count: "32", success: "32", failure: "125", rate: "0.203821656051"},
+{cat: "Security", count: "72", success: "72", failure: "81", rate: "0.470588235294"},
+{cat: "Technology", count: "52", success: "52", failure: "96", rate: "0.351351351351"},
+{cat: "Video", count: "45", success: "45", failure: "88", rate: "0.338345864662"},
+{cat: "Web Hosting", count: "56", success: "56", failure: "69", rate: "0.448"},
+{cat: "Networking", count: "35", success: "35", failure: "86", rate: "0.289256198347"},
+{cat: "Consulting", count: "12", success: "12", failure: "102", rate: "0.105263157895"},
+{cat: "Semiconductors", count: "56", success: "56", failure: "57", rate: "0.495575221239"},
+{cat: "Sales and Marketing", count: "37", success: "37", failure: "68", rate: "0.352380952381"},
+{cat: "Search", count: "26", success: "26", failure: "73", rate: "0.262626262626"},
+{cat: "News", count: "26", success: "26", failure: "66", rate: "0.282608695652"},
+{cat: "Medical", count: "20", success: "20", failure: "70", rate: "0.222222222222"}],
         name: 'Successes'
     }, {
-        data: [{city: "New York", count: "234", success: "179", failure: "234", rate: "0.433414043584"},
-{city: "San Francisco", count: "211", success: "184", failure: "211", rate: "0.46582278481"},
-{city: "London", count: "183", success: "101", failure: "183", rate: "0.355633802817"},
-{city: "Austin", count: "65", success: "42", failure: "65", rate: "0.392523364486"},
-{city: "Seattle", count: "55", success: "48", failure: "55", rate: "0.466019417476"},
-{city: "Paris", count: "79", success: "20", failure: "79", rate: "0.20202020202"},
-{city: "Los Angeles", count: "61", success: "37", failure: "61", rate: "0.377551020408"},
-{city: "Palo Alto", count: "59", success: "39", failure: "59", rate: "0.397959183673"},
-{city: "San Diego", count: "51", success: "44", failure: "51", rate: "0.463157894737"},
-{city: "Chicago", count: "53", success: "38", failure: "53", rate: "0.417582417582"},
-{city: "Boston", count: "51", success: "36", failure: "51", rate: "0.413793103448"},
-{city: "Cambridge", count: "41", success: "38", failure: "41", rate: "0.481012658228"},
-{city: "Beijing", count: "47", success: "28", failure: "47", rate: "0.373333333333"},
-{city: "Mountain View", count: "34", success: "40", failure: "34", rate: "0.540540540541"},
-{city: "Singapore", count: "43", success: "27", failure: "43", rate: "0.385714285714"},
-{city: "San Jose", count: "37", success: "33", failure: "37", rate: "0.471428571429"},
-{city: "Santa Clara", count: "26", success: "41", failure: "26", rate: "0.611940298507"},
-{city: "Sunnyvale", count: "34", success: "30", failure: "34", rate: "0.46875"},
-{city: "Redwood City", count: "31", success: "28", failure: "31", rate: "0.474576271186"},
-{city: "Bangalore", count: "47", success: "12", failure: "47", rate: "0.203389830508"},
-{city: "Shanghai", count: "34", success: "24", failure: "34", rate: "0.413793103448"},
-{city: "Berlin", count: "38", success: "18", failure: "38", rate: "0.321428571429"},
-{city: "San Mateo", count: "27", success: "28", failure: "27", rate: "0.509090909091"},
-{city: "Toronto", count: "26", success: "28", failure: "26", rate: "0.518518518519"},
-{city: "Dublin", count: "42", success: "12", failure: "42", rate: "0.222222222222"},
-{city: "Tel Aviv", count: "39", success: "15", failure: "39", rate: "0.277777777778"},
-{city: "Atlanta", count: "35", success: "15", failure: "35", rate: "0.3"},
-{city: "Tokyo", count: "32", success: "18", failure: "32", rate: "0.36"},
-{city: "Denver", count: "27", success: "18", failure: "27", rate: "0.4"},
-{city: "Barcelona", count: "31", success: "14", failure: "31", rate: "0.311111111111"}],
+        data: [{cat: "Software", count: "782", success: "347", failure: "782", rate: "0.307351638618"},
+{cat: "Biotechnology", count: "406", success: "245", failure: "406", rate: "0.376344086022"},
+{cat: "Mobile", count: "362", success: "179", failure: "362", rate: "0.330868761553"},
+{cat: "Curated Web", count: "278", success: "113", failure: "278", rate: "0.289002557545"},
+{cat: "E-Commerce", count: "271", success: "104", failure: "271", rate: "0.277333333333"},
+{cat: "Enterprise Software", count: "206", success: "148", failure: "206", rate: "0.418079096045"},
+{cat: "Advertising", count: "229", success: "114", failure: "229", rate: "0.332361516035"},
+{cat: "Games", count: "215", success: "74", failure: "215", rate: "0.256055363322"},
+{cat: "Health Care", count: "147", success: "129", failure: "147", rate: "0.467391304348"},
+{cat: "Social Media", count: "174", success: "70", failure: "174", rate: "0.286885245902"},
+{cat: "Hardware + Software", count: "152", success: "81", failure: "152", rate: "0.347639484979"},
+{cat: "Finance", count: "145", success: "72", failure: "145", rate: "0.331797235023"},
+{cat: "Clean Technology", count: "143", success: "73", failure: "143", rate: "0.337962962963"},
+{cat: "Analytics", count: "94", success: "88", failure: "94", rate: "0.483516483516"},
+{cat: "Health and Wellness", count: "126", success: "45", failure: "126", rate: "0.263157894737"},
+{cat: "Manufacturing", count: "128", success: "38", failure: "128", rate: "0.228915662651"},
+{cat: "SaaS", count: "95", success: "69", failure: "95", rate: "0.420731707317"},
+{cat: "Internet", count: "122", success: "40", failure: "122", rate: "0.246913580247"},
+{cat: "Education", count: "125", success: "32", failure: "125", rate: "0.203821656051"},
+{cat: "Security", count: "81", success: "72", failure: "81", rate: "0.470588235294"},
+{cat: "Technology", count: "96", success: "52", failure: "96", rate: "0.351351351351"},
+{cat: "Video", count: "88", success: "45", failure: "88", rate: "0.338345864662"},
+{cat: "Web Hosting", count: "69", success: "56", failure: "69", rate: "0.448"},
+{cat: "Networking", count: "86", success: "35", failure: "86", rate: "0.289256198347"},
+{cat: "Consulting", count: "102", success: "12", failure: "102", rate: "0.105263157895"},
+{cat: "Semiconductors", count: "57", success: "56", failure: "57", rate: "0.495575221239"},
+{cat: "Sales and Marketing", count: "68", success: "37", failure: "68", rate: "0.352380952381"},
+{cat: "Search", count: "73", success: "26", failure: "73", rate: "0.262626262626"},
+{cat: "News", count: "66", success: "26", failure: "66", rate: "0.282608695652"},
+{cat: "Medical", count: "70", success: "20", failure: "70", rate: "0.222222222222"}],
         name: 'Failures'
     }
 
@@ -371,9 +371,9 @@ width = 1000 - margins.left - margins.right - legendPanel.width,
             // Structure it so that your numeric
             // axis (the stacked amount) is y
             return {
-                city: o.city,
+                cat: o.cat,
                 y: o.count,
-                x: o.city,
+                x: o.cat,
                 suc: o.success,
                 fail: o.failure,
                 rate: o.rate
@@ -388,7 +388,7 @@ var tip = d3.tip()
       .attr('class', 'd3-tip')
       .offset([-10, 0])
       .html(function(d) {
-        return "<strong>" + d.city + "</strong><br />Successes: " + d.suc + "<br />Failures: " + d.fail + "<br /> Rate: " + parseFloat(d.rate * 100).toFixed(1) + "%";
+        return "<strong>" + d.cat + "</strong><br />Successes: " + d.suc + "<br />Failures: " + d.fail + "<br /> Rate: " + parseFloat(d.rate * 100).toFixed(1) + "%";
 
         //return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
       })
@@ -397,7 +397,7 @@ var dataset = dataset.map(function (group) {
     return group.map(function (d) {
         // Invert the x and y values, and y0 becomes x0
         return {
-            city: d.city,
+            cat: d.cat,
             x: d.y,
             y: d.x,
             x0: d.y0,
@@ -407,7 +407,7 @@ var dataset = dataset.map(function (group) {
         };
     });
 }),
-    svg = d3.select('#citysuccessrates')
+    svg = d3.select('#categorysuccessrates')
         .append('svg')
         .attr('width', width + margins.left + margins.right + legendPanel.width)
         .attr('height', height + margins.top + margins.bottom)
@@ -418,7 +418,7 @@ var dataset = dataset.map(function (group) {
             return d.x + d.x0;
         });
     }),
-    xMax = 450,
+    xMax = 1200,
     xScale = d3.scale.linear()
         .domain([0, xMax])
         .range([0, width]),
