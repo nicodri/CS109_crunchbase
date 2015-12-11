@@ -11,44 +11,44 @@ http://nicodri.github.io/CS109_crunchbase/
 ## Data Collection Notebook
 Used to pull data from the CrunchBase API.
 
-* [Scraping Data](https://github.com/nicodri/CS109_crunchbase/blob/master/DataScraping.ipynb)
-* [1. Organization List](#1.-Organization-List)
-* [2. Excel API](#2.-Excel-API)
-* [3. Relationships](#3.-Relationships) 
+[Scraping Data](https://github.com/nicodri/CS109_crunchbase/blob/master/DataScraping.ipynb)
+* Organization-List
+* Excel-API
+* Relationships 
 
 ## Ensemble Analysis Notebook
 Used to analyze the CrunchBase data by building individual Models and combining them into an ensemble.
 
-* [Predicting Startup Success](https://github.com/nicodri/CS109_crunchbase/blob/master/EnsembleAnalysis.ipynb)
-* [1. Data Cleaning](#1.-Data-Cleaning)
-* [2. Exploratory Data Analysis](#2.-Exploratory-Data-Analysis)
-* [3. Bring out the Models](#3.-Bring-out-the-Models) 
-    * [3.1 The Baseline Model](#3.1-The-Baseline-Model)
-    * [3.2 K-Nearest Neighbors](#3.2-K-Nearest-Neighbors)
-    * [3.3 Logistic Regression](#3.3-Logistic-Regression)
-    * [3.4 SVM](#3.4-SVM)
-    * [3.5 Naive Bayes](#3.5-Naive-Bayes)
-    * [3.6 Random Forests](#3.6-Random-Forests)
-* [4. Building an Ensemble](#4.-Building-an-Ensemble)
-* [5. ROC/Profit Curves](#5.-ROC/Profit-Curves)
+[Predicting Startup Success](https://github.com/nicodri/CS109_crunchbase/blob/master/EnsembleAnalysis.ipynb)
+* Data-Cleaning
+* Exploratory-Data-Analysis
+* Bring out the Models
+    * The Baseline Model
+    * K-Nearest Neighbors
+    * Logistic Regression
+    * SVM
+    * Naive Bayes
+    * Random Forests
+* Building an Ensemble
+* ROC/Profit Curves
 
 ## Similarity Graph Notebook
 Used to build a similarity graph of the companies.
 
-* [Similarity Graph](https://github.com/nicodri/CS109_crunchbase/blob/master/Similarity%20Graph.ipynb)
-* [1. Formating the Data](#1.-Formating-the-Data)
-    * [1.1 Loading Data](#1.1-Loading-Data)
-    * [1.2 Dimensionality Reduction](#1.2-Dimensionality-Reduction)
-* [2. Distance Matrix](#2.-Distance-Matrix)
-    * [2.1 Closest Neighbors](#2.1-Closest-Neighbors)
-    * [2.2 Multi-Dimensional Scaling (MDS)](#2.2-Multi-Dimensional-Scaling-(MDS))
-* [3. Unsupervised Learning](#3.-Unsupervised-Learning) 
-    * [3.1 k Means](#3.1-k-Means)
-    * [3.2 Gaussian Mixture Models](#3.2-Gaussian-Mixture-Models)
-    * [3.3 Results](#3.3-Results)
-* [4.Tuned Similarity Mapping](#4.-Tuned-Similarity-Mapping)
-    * [3.1 Competitors Graph](#3.1-Competitors-Graph)
-    * [3.2 Weighted Graph](#3.2-Weighted-Graph)
+[Similarity Graph](https://github.com/nicodri/CS109_crunchbase/blob/master/Similarity%20Graph.ipynb)
+* Formating the Data
+    * Loading Data
+    * Dimensionality Reduction
+* Distance Matrix
+    * Closest Neighbors
+    * Multi-Dimensional Scaling (MDS)
+* Unsupervised Learning
+    * k Means
+    * Gaussian Mixture Models
+    * Results
+* Tuned Similarity Mapping
+    * Competitors Graph
+    * Weighted Graph
     
 # System Requirements
 
